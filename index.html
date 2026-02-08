@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayam Goreng Crispy - Restoran Terbaik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🍗 Crispy Chicken House</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#order" class="nav-link">Order</a></li>
+                <li><a href="#about" class="nav-link">Tentang Kami</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+                <li><a href="#history" class="nav-link">Riwayat Pesanan</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di Crispy Chicken House</h1>
+            <p>Nikmati Kelezatan Ayam Goreng Crispy Terbaik dengan Bumbu Rahasia Kami</p>
+            <a href="#menu" class="btn-primary">Lihat Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">Menu Kami</h2>
+            
+            <h3 class="menu-category">Makanan</h3>
+            <div class="menu-grid">
+                <div class="menu-card" data-id="1" data-name="Ayam Crispy Original" data-price="25000" data-category="makanan">
+                    <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400&h=300&fit=crop" alt="Ayam Crispy Original">
+                    <div class="menu-info">
+                        <h3>Ayam Crispy Original</h3>
+                        <p>Ayam goreng crispy dengan bumbu original khas kami</p>
+                        <div class="price-order">
+                            <span class="price">Rp 25.000</span>
+                            <button class="btn-order" onclick="addToCart(1)">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="2" data-name="Ayam Crispy Pedas" data-price="27000" data-category="makanan">
+                    <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=400&h=300&fit=crop" alt="Ayam Crispy Pedas">
+                    <div class="menu-info">
+                        <h3>Ayam Crispy Pedas</h3>
+                        <p>Ayam crispy dengan level kepedasan tinggi</p>
+                        <div class="price-order">
+                            <span class="price">Rp 27.000</span>
+                            <button class="btn-order" onclick="addToCart(2)">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="3" data-name="Ayam Crispy Cheese" data-price="30000" data-category="makanan">
+                    <img src="https://images.unsplash.com/photo-1562967914-608f82629710?w=400&h=300&fit=crop" alt="Ayam Crispy Cheese">
+                    <div class="menu-info">
+                        <h3>Ayam Crispy Cheese</h3>
+                        <p>Ayam crispy dengan taburan keju melimpah</p>
+                        <div class="price-order">
+                            <span class="price">Rp 30.000</span>
+                            <button class="btn-order" onclick="addToCart(3)">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="4" data-name="Paket Ayam + Nasi" data-price="32000" data-category="makanan">
+                    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400&h=300&fit=crop" alt="Paket Ayam Nasi">
+                    <div class="menu-info">
+                        <h3>Paket Ayam + Nasi</h3>
+                        <p>1 potong ayam crispy dengan nasi putih hangat</p>
+                        <div class="price-order">
+                            <span class="price">Rp 32.000</span>
+                            <button class="btn-order" onclick="addToCart(4)">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="5" data-name="Paket Keluarga" data-price="95000" data-category="makanan">
+                    <img src="https://images.unsplash.com/photo-1594221708779-94832f4320d1?w=400&h=300&fit=crop" alt="Paket Keluarga">
+                    <div class="menu-info">
+                        <h3>Paket Keluarga</h3>
+                        <p>5 potong ayam crispy untuk keluarga tercinta</p>
+                        <div class="price-order">
+                            <span class="price">Rp 95.000</span>
+                            <button class="btn-order" onclick="addToCart(5)">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="6" data-name="Kentang Goreng" data-price="15000" data-category="makanan">
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop" alt="Kentang Goreng">
+                    <div class="menu-info">
+                        <h3>Kentang Goreng</h3>
+                        <p>Kentang goreng crispy dengan saus pilihan</p>
+                        <div class="price-order">
+                            <span class="price">Rp 15.000</span>
+                            <button class="btn-order" onclick="addToCart(6)">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="menu-category">Minuman</h3>
+            <div class="menu-grid">
+                <div class="menu-card" data-id="7" data-name="Es Teh Manis" data-price="5000" data-category="minuman">
+                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&h=300&fit=crop" alt="Es Teh Manis">
+                    <div class="menu-info">
+                        <h3>Es Teh Manis</h3>
+                        <p>Teh manis dingin yang menyegarkan</p>
+                        <div class="price-order">
+                            <span class="price">Rp 5.000</span>
+                            <button class="btn-order" onclick="addToCart(7)">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="8" data-name="Jus Jeruk" data-price="12000" data-category="minuman">
+                    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=400&h=300&fit=crop" alt="Jus Jeruk">
+                    <div class="menu-info">
+                        <h3>Jus Jeruk</h3>
+                        <p>Jus jeruk segar tanpa pengawet</p>
+                        <div class="price-order">
+                            <span class="price">Rp 12.000</span>
+                            <button class="btn-order" onclick="addToCart(8)">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="14" data-name="Lemon Black Tea" data-price="10000" data-category="minuman">
+                    <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=400&h=300&fit=crop" alt="Lemon Black Tea">
+                    <div class="menu-info">
+                        <h3>Lemon Black Tea</h3>
+                        <p>Teh hitam segar dengan perasan lemon alami</p>
+                        <div class="price-order">
+                            <span class="price">Rp 10.000</span>
+                            <button class="btn-order" onclick="addToCart(14)">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="15" data-name="Brown Sugar Latte" data-price="15000" data-category="minuman">
+                    <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=400&h=300&fit=crop" alt="Brown Sugar Latte">
+                    <div class="menu-info">
+                        <h3>Brown Sugar Latte</h3>
+                        <p>Latte creamy dengan gula aren manis khas Taiwan</p>
+                        <div class="price-order">
+                            <span class="price">Rp 15.000</span>
+                            <button class="btn-order" onclick="addToCart(15)">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-id="9" data-name="Soft Drink" data-price="8000" data-category="minuman">
+                    <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&h=300&fit=crop" alt="Soft Drink">
+                    <div class="menu-info">
+                        <h3>Soft Drink</h3>
+                        <p>Minuman bersoda pilihan</p>
+                        <div class="price-order">
+                            <span class="price">Rp 8.000</span>
+                            <button class="btn-order" onclick="addToCart(9)">Pesan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="order-section">
+        <div class="container">
+            <h2 class="section-title">Keranjang Pesanan</h2>
+            <div class="order-content">
+                <div class="cart-container">
+                    <div id="cart-items"></div>
+                    <div class="cart-summary">
+                        <div class="summary-row">
+                            <span>Total:</span>
+                            <span id="cart-total">Rp 0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout-form">
+                    <h3>Detail Pesanan</h3>
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label>Jenis Pesanan</label>
+                            <div class="radio-group">
+                                <label class="radio-option">
+                                    <input type="radio" name="orderType" value="dine-in" required>
+                                    <span class="radio-label">🍽️ Makan di Tempat</span>
+                                </label>
+                                <label class="radio-option">
+                                    <input type="radio" name="orderType" value="take-away" required>
+                                    <span class="radio-label">🥡 Dibawa Pulang</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerName">Nama Lengkap</label>
+                            <input type="text" id="customerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">No. Telepon</label>
+                            <input type="tel" id="customerPhone" required>
+                        </div>
+                        <div class="form-group" id="addressGroup">
+                            <label for="customerAddress">Alamat Lengkap</label>
+                            <textarea id="customerAddress" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderNotes">Catatan Pesanan (Opsional)</label>
+                            <textarea id="orderNotes" rows="2"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">Kirim Pesanan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Tentang Kami</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Sejarah Crispy Chicken House</h3>
+                    <p>Crispy Chicken didirikan pada tahun 2018 dengan visi menjadi restoran ayam goreng crispy terbaik di Indonesia. Kami memulai perjalanan dari sebuah warung kecil dengan resep rahasia keluarga yang telah diwariskan turun-temurun.</p>
+                    
+                    <h3>Komitmen Kami</h3>
+                    <p>Kami berkomitmen untuk selalu menggunakan bahan-bahan berkualitas tinggi dan segar. Setiap ayam yang kami sajikan dipilih dengan cermat dan diproses dengan standar kebersihan tertinggi. Bumbu rahasia kami memberikan cita rasa yang unik dan tidak dapat ditiru.</p>
+                    
+                    <h3>Keunggulan Kami</h3>
+                    <ul>
+                        <li>Ayam segar berkualitas premium</li>
+                        <li>Bumbu rahasia keluarga</li>
+                        <li>Tekstur crispy yang sempurna</li>
+                        <li>Layanan ramah dan cepat</li>
+                        <li>Harga terjangkau untuk semua kalangan</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=600&h=400&fit=crop" alt="Tentang Kami">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Hubungi Kami</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>📍 Alamat</h3>
+                        <p>Jl. Jendral Sudirman Waioti<br>Maumere, Nusa Tenggara Timur 86118</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>📞 Telepon</h3>
+                        <p>+62 812-3456-7890</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>✉️ Email</h3>
+                        <p>info@crispychicken.com</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>🕐 Jam Operasional</h3>
+                        <p>Senin - Jumad: 08.00 - 22.00 WITA</p>
+                        <p>Sabtu - Minggu: 10.00 - 22.30 WITA</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Kirim Pesan</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Nama</label>
+                            <input type="text" id="contactName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subjek</label>
+                            <input type="text" id="contactSubject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Pesan</label>
+                            <textarea id="contactMessage" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history" class="history-section">
+        <div class="container">
+            <h2 class="section-title">Riwayat Pesanan</h2>
+            <div id="order-history" class="history-container"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2018 Crispy Chicken House. All Rights Reserved.</p>
+            <p>Dibuat dengan ❤️ untuk pecinta ayam crispy</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
